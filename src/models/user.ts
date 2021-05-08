@@ -40,4 +40,4 @@ userSchema.methods.comparePassword = function (password:string):Promise<boolean>
     return bcrypt.compare(password, this.password)
 }
 
-export default model('User', userSchema)
+export default model<IUser>('User', userSchema)
